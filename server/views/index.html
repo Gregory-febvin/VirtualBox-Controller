@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/style.css" >
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="header">
+            <!--
+            <div class="header">
+                
+                <img src="/images/logo.png" alt="Image de Premier Plan" class="foreground-image">
+                <h1></h1>
+                
+            </div>
+            -->
+        </div>
+
+        <div class="nav">
+            <a id="vm_create">Nouvelle VM</a>
+        </div>
+
+        <div class="main">
+            <div id="form_create">
+                <input type="text" id="createNameInput" placeholder="Nom de la vm">
+                <input type="text" id="createPathInput" placeholder="Nom du path" value="..\VirtualBox VMs\Virtual Machine">
+                <input type="text" id="createOsTypeInput" placeholder="Nom du osType" value="Ubuntu">
+                <input type="text" id="createISOInput" placeholder="Chemin absolue ISO (Optionel)" value="">
+                <input type="text" id="createRamSizeInput" placeholder="ramSize" value="2048">
+                <input type="text" id="createVramSizeInput" placeholder="vramSize" value="128">
+                <input type="text" id="createStorageSizeInput" placeholder="storageSize" value="20000">
+                <button id="createButton">Valider</button>
+            </div>
+    
+            <div id="form_clone">
+                <input type="text" id="cloneNameInput" placeholder="Nom du clone">
+                <input type="text" id="clonePathInput" placeholder="Nom du path" value="..\VirtualBox VMs">
+                <button id="cloneButton">Valider</button>
+            </div>
+            
+            <div id="vm_list"></div>
+        </div>
+
+        <div class="footer">
+            <p>UniVbox © 2024</p>
+        </div>
+
+        <script src="/scripts/script.js"></script>
+    </body>
+</html>

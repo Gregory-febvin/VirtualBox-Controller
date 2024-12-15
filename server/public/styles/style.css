@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.header {
+    position: relative;
+    background-color: #007bff; /* Couleur de secours au cas où l'image ne charge pas */
+    color: #ffffff;
+    padding: 26px;
+    height: 120px;
+    text-align: center;
+    background-image: url('/images/Background.jpg'); /* Chemin vers votre image */
+    background-size: cover; /* S'assure que l'image couvre entièrement l'espace disponible */
+    background-position: center; /* Centre l'image dans l'élément */
+}
+
+.foreground-image {
+    position: absolute;
+    top: 50%; /* Ajustez ces valeurs pour positionner l'image comme vous le souhaitez */
+    left: 2;
+    transform: translate(-50%, -50%); /* Centre l'image par rapport à sa position */
+    max-width: 160px; /* Maximum width to ensure the image doesn't get too big */
+    min-width: 160px; /* Minimum width to ensure the image remains visible */
+    width: auto;
+    height: auto;
+    /* Ajoutez toute autre propriété CSS ici pour ajuster la taille ou l'aspect de l'image */
+}
+
+
+.header h1, .header p {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec 50% d'opacité */
+    color: #ffffff; /* Couleur du texte blanc */
+    padding: 5px 10px; /* Espacement autour du texte */
+}
+
+
+.nav {
+    background-color: hsl(0, 0%, 41%);
+    overflow: hidden;
+}
+.nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.nav a:hover {
+    background-color: hsl(0, 0%, 35%);
+    color: black;
+}
+.main {
+    padding: 20px;
+    padding-bottom: 100px
+}
+.footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+}
+
+
+/* Styles globaux pour les boutons */
+input[type="submit"] {
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 12px 24px; /* Espacement intérieur */
+    border: none; /* Supprime la bordure */
+    border-radius: 4px; /* Arrondit les coins */
+    cursor: pointer; /* Change le curseur en main */
+    font-size: 16px; /* Taille du texte */
+    transition: all 0.3s ease; /* Animation douce */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Couleur de fond au survol */
+}
+
+/* Optionnel: Style pour améliorer l'espacement autour du bouton */
+.form-group {
+    margin-bottom: 15px; /* Ajoute un peu d'espace en bas de chaque groupe de formulaire */
+}
+
+.form-group input {
+    width: calc(100% - 48px); /* Ajuste la largeur pour être responsive */
+    margin-top: 8px; /* Espacement supérieur */
+}
+
+#vm_list {
+    align-items: center;
+    justify-content: center;
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap;
+}
+
+.vm-item {
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+
+#form_create, #form_clone {
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    margin: 10px auto;
+}
+
+#form_create input,
+#form_clone input {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+/* Style général des boutons */
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1068A0; /* Couleur de fond initiale */
+    color: white; /* Couleur du texte */
+    padding: 10px 15px; /* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour le survol et l'ombre */
+    font-weight: bold; /* Texte en gras */
+    margin: 5px; /* Marge autour des boutons */
+}
+
+button:hover {
+    background-color: #0D5C86; /* Couleur de fond au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée pour un effet de "soulèvement" */
+}
+
+button:active {
+    background-color: #0A4661; /* Couleur de fond lors du clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre plus petite pour l'effet de pression */
+}
+
+/* Amélioration de l'espacement et de l'alignement des boutons */
+.vm-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner les éléments à gauche */
+    padding: 15px; /* Plus d'espacement intérieur */
+    margin-bottom: 15px; /* Marge au bas de chaque vm-item */
+    background: #ffffff; /* Fond blanc pour contraster avec l'arrière-plan de la page */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour la distinction */
+    border-radius: 5px; /* Bordures arrondies */
+}
+
+/* Styles pour les boutons inactifs ou désactivés */
+button[disabled] {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed; /* Curseur indiquant que le bouton est désactivé */
+}
+
+button i {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+}
+
